@@ -15,6 +15,7 @@ git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
 2. git clone <<path>> 				=> Create Local Repo from Remote Repo
 3. git add filename or . 			=> Add Modified files to Index
 4. git commit -m "Commit message"	=> Commit Changes with a proper message to Head
+4a. git commit -am "Commit message"	=> Add and Commit Changes with a proper message to Head
 5. git push origin master			=> Push the changes to Remote Repo
 6. git remote add origin <server>	=> Alterbate to clone and add remore Repo
 7. gitk 							=> Commit Viewer for Git
@@ -31,6 +32,7 @@ git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
 3. git checkout -b feature_x		=> Create a new branch named and switch to it
 4. git checkout master				=> Switch back to master
 5. git branch -d feature_x			=> Delete the branch 
+5a. git push origin --delete feature_x => Delete from Remote
 6. git push origin <branch>			=> Push branch to Remote Repo to make it available to others
 7. git status 						=> To see the list of files modified
 8. git branch -m <oldname> <newname> => rename brache
@@ -39,6 +41,7 @@ git for-each-ref --format='%(authorname) %09 -%(refname)' | sort
 
 1. git pull							=> Update local repository to the newest commit. Will fetch & merge Remote Changes
 2. git merge <branch>				=> To merge another branch into active branch. Merge Conflicts and add files after resolving the conflicts
+2a. git merge --no-ff <branch> => Merge without Fast Forword. This causes the merge to always create a new commit object
 3. git pull origin master_dev		=> Getting the latest updates from master_dev branch
 4. git merge --abort				=> Abort a bad merge
 
